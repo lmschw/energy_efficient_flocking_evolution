@@ -113,7 +113,7 @@ def _bearings(positions, eps=1e-9):
     """Movement-direction heading per agent per step, from consecutive position fixes (the
     same GPS-fix-derived heading convention used in the ibis/pigeon/stork literature this is
     modeled on -- NOT the simulator's internal body-orientation state). Shape (T-1, N).
-    A step where an agent doesn't move (e.g. fully braked by the safety clamp) has an
+    A step where an agent doesn't move has an
     undefined bearing; carries the previous step's heading forward rather than snapping to 0,
     since arctan2(0, 0) == 0 would otherwise inject a fake "due east" heading into the
     turning-rate signal used by the directional-correlation-delay network."""

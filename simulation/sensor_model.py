@@ -4,8 +4,8 @@
 fix: the MATLAB source never actually masks out neighbors beyond the sensing radius
 R (it only uses R as the "no neighbor found" default), so a distant neighbor could
 still register as the "nearest in quadrant" and produce a normalized distance outside
-[-1, 1]. The paper is explicit that "every robot can perceive neighbours only when
-they are within a sensing radius R" (Section 2.1), so this port enforces that cutoff.
+[-1, 1]. The paper's robots perceive neighbours only within the sensing radius R, so this
+port enforces that cutoff.
 """
 import numpy as np
 

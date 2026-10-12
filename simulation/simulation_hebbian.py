@@ -1,17 +1,12 @@
-"""Full episode simulation for the Hebbian ABCD controller (paper Sections 2-3).
+"""Full episode simulation for the Hebbian ABCD controller.
 
-1:1 port of simulation_free_global_mod_2.m's main loop, reusing the wind/drag/battery
-physics and spawn logic in this package's own wind_physics.py (a standalone copy of the
-same functions originally validated in initial_implementation/experiment/
-simulation_free_global_mod_2_LJ.py -- RayTraceCircularRobots/dragforce/batterydrainage/
-_spawn_agents are identical between the LJ and non-LJ MATLAB simulation files, only the
-controller differs -- duplicated here so this package has no import dependency on
-initial_implementation; see wind_physics.py's docstring).
+1:1 port of the MATLAB reference simulation_free_global_mod_2.m's main loop, using the
+wind/drag/battery physics and spawn logic in wind_physics.py (the same functions as in the
+baseline's simulation; only the controller differs).
 
 Unlike move() in the MATLAB source, _move() here tracks inter-robot and wall collisions
-SEPARATELY rather than pre-summing them into one counter, because the paper's stage 2/3
-fitness formulas (Table 2) weight and use collision_time and wall_collision_time
-independently.
+SEPARATELY rather than pre-summing them into one counter, because the stage fitness
+(stage_fitness() below) weighs collision_time and wall_collision_time differently.
 """
 import io
 
@@ -43,9 +38,9 @@ except ModuleNotFoundError:
 def _resolve_collisions(agents, min_dist, n_agents, max_iter=10, strength=1.0):
     """Iteratively pushes overlapping agents apart toward min_dist -- REVIVES a
     mechanism that exists in the MATLAB reference (simulation_free_global_mod_2.m's
-    move()) but is commented out there, so neither the reference nor this port's
-    prior behavior ever actually prevented agents from overlapping; both only counted
-    and penalized it after the fact via the fitness formula.
+    move()) but is commented out there: without it agents can overlap, and overlap is
+    only counted and penalized after the fact via the fitness formula. Switched by
+    config.HEBBIAN_RESOLVE_COLLISIONS (off for the paper's controller).
 
     Faithful port of the disabled MATLAB loop: processes pairs in one of two priority
     orderings, alternating across iterations (first half of max_iter: agents ordered
@@ -60,13 +55,9 @@ def _resolve_collisions(agents, min_dist, n_agents, max_iter=10, strength=1.0):
     snaps straight to min_dist in one push. Lower values only close part of the gap
     per push (target_dist = dist + strength*(min_dist-dist)), so a hard pileup takes
     several of the max_iter passes to fully separate rather than being erased
-    instantly -- added after strength=1.0 (n10_seed42) showed the controller driving
-    into MORE collision-course commands than any other variant tried (357.5s) and
-    battery cratering: full-strength resolution may remove the physical consequence of
-    crowding so completely that there's nothing left teaching the controller to avoid
-    it in the first place, since the fitness-visible collision-count penalty alone
-    apparently isn't enough. A softer push keeps some lingering cost (reduced net
-    progress, more resolution passes needed) without reintroducing true interpenetration.
+    instantly. With strength=1.0 a trained controller drove into collisions more often:
+    removing the physical consequence of crowding leaves only the small fitness penalty
+    to discourage it. A softer push keeps some lingering cost.
     """
     corners = np.array([[5.0, 5.0], [5.0, -5.0], [-5.0, 5.0], [-5.0, -5.0]])
     order1 = np.argsort(-agents[:, 0])  # right to left, matches MATLAB's order1
@@ -365,7 +356,7 @@ def _plot_hebbian_frame(ax, fig, agents, r, max_battery, t, video_writer, wind_f
     drawing as simulation_free_global_mod_2_LJ.py's plot_all(), but (a) takes max_battery
     as a parameter instead of hardcoding the LJ model's config.MAX_BATTERY (Hebbian
     battery is on a 0-100 scale, not the LJ model's 150), and (b) the wind-field
-    background is optional, since stage 1 (walk_left) trains with wind disabled and has
+    background is optional, since an episode can run with wind disabled and then has
     no wind field to show."""
     ax.clear()
     if wind_field is not None:
@@ -415,7 +406,7 @@ def render_hebbian_episode_video(abcd_rules, seed=None, n_agents=None, wind_enab
                                   max_battery=None, min_battery=None, nx=None, ny=None,
                                   use_battery_sensor=True, video_path=None, record_battery=False):
     """Same episode loop/physics as simulate_hebbian_episode(), but renders a video frame
-    every step (reusing simulation_free_global_mod_2_LJ.py's video-writing machinery)
+    every step (with wind_physics._open_video_writer)
     instead of just returning summary statistics. Kept as a separate function rather than
     a visualize=True branch on simulate_hebbian_episode(), since that function is CMA-ES's
     hot path (thousands of calls per training run) and shouldn't carry video-rendering
@@ -514,11 +505,11 @@ def render_hebbian_episode_video(abcd_rules, seed=None, n_agents=None, wind_enab
 
 def stage_fitness(dist_travelled, average_batt, collision_time, wall_collision_time, cohesion_dist,
                    proximity_penalty, stage):
-    """Table 2's per-stage fitness formula, extended with an explicit distance weight
-    (config.HEBBIAN_EFF_DISTANCE_WEIGHT) so distance-travelled dominates battery
-    preservation -- mirroring the LJ model's own EFF_DISTANCE_WEIGHT fix for the
-    identical failure mode. Table 2's literal formula has no such multiplier; see that
-    constant's comment for why this is a deliberate, disclosed deviation.
+    """Per-stage fitness (the paper's Table "Fitness function during each evolution stage"):
+    Mahdavi et al.'s formula, extended with an explicit distance weight
+    (config.HEBBIAN_EFF_DISTANCE_WEIGHT) so distance travelled dominates battery
+    preservation -- mirroring the LJ model's own EFF_DISTANCE_WEIGHT. See that constant's
+    comment for why.
 
     eff = HEBBIAN_EFF_DISTANCE_WEIGHT*dist + avg_batt/battery_w
           - (wall_col_mult*wall_col_time [+ collision_time]) / collision_w
@@ -528,9 +519,9 @@ def stage_fitness(dist_travelled, average_batt, collision_time, wall_collision_t
     cohesion_dist is a pure geometric closeness term (mean pairwise inter-agent
     distance) -- purely positional, carries no velocity/heading/direction information,
     so it can only ever pull agents toward each other; it can't reward "moving" in any
-    sense. See HEBBIAN_STAGE_FITNESS_WEIGHTS's comment for why this is separate from,
-    and much smaller than, the collision penalty above. proximity_penalty is the
-    graduated pre-collision warning term -- see HEBBIAN_PROXIMITY_* in config.py.
+    sense. proximity_penalty is the graduated pre-collision warning term -- see
+    HEBBIAN_PROXIMITY_* in config.py. Both are inactive in every stage (cohesion_w and
+    proximity_w are None in config.HEBBIAN_STAGE_FITNESS_WEIGHTS).
     """
     battery_w, collision_w, wall_col_mult, include_inter_robot, cohesion_w, proximity_w = \
         config.HEBBIAN_STAGE_FITNESS_WEIGHTS[stage]

@@ -1,4 +1,4 @@
-"""Staged CMA-ES training for the Hebbian ABCD controller (paper Sections 2.2-2.3).
+"""Staged CMA-ES training for the Hebbian ABCD controller.
 
 The paper's 2-stage run (walk_upwind -> save_battery_avoid_all) is driven by train.py, which
 calls run_stage() below directly. This module's own entry point runs all three stages:
@@ -6,14 +6,10 @@ calls run_stage() below directly. This module's own entry point runs all three s
   2. save_battery_avoid_wall    -- wind enabled, + battery term, + wall-collision penalty
   3. save_battery_avoid_all     -- wind enabled, + battery term, + wall AND inter-robot collision penalty
 
-Each stage runs CMA-ES (population 30, 100 generations, sigma0=0.3) with every
-candidate evaluated over 3 random seeds, taking the MEDIAN efficiency as its fitness
-(paper Section 2.2; matches evaluateABCD.m's sort-and-take-median-of-3 technique).
-Stage 1 starts from a fresh ABCD_init sampled uniformly from [-5, 5]; stages 2 and 3
-each start from the previous stage's best genome ("Next stage: best x is initial x",
-Fig. 1) -- this is the actual curriculum mechanism, distinct from the small/baseline/
-large_scale agent-count sweep in run_batch_experiments.py (which has no equivalent in
-the paper).
+Each stage runs CMA-ES (population 30, 100 generations by default, sigma0=0.3) with every
+candidate evaluated over 3 random seeds, taking the MEDIAN efficiency as its fitness (as the
+MATLAB reference's evaluateABCD.m does). Stage 1 starts from a genome sampled uniformly from
+[-5, 5]; every later stage starts from the previous stage's best genome.
 
 MATLAB reference for the underlying architecture: hebbianStep.m, the getsensordata()/
 W(i) init loop in simulation_free_global_mod_2.m. NOT evaluateABCD.m/optimizeABCD.m,
@@ -144,7 +140,7 @@ def run_stage(stage, x0, plotter, popsize, maxiter, n_agents, n_repeats, seed_ba
         json.dump({"stage": stage, "battery_sensor": use_battery_sensor, "best_loss": best_loss,
                    "best_efficiency": -best_loss, "loss_curve": fitness_history,
                    "genome": best_genome.tolist(),
-                   # Recorded so playback/analysis tools (visualize_hebbian.py) can detect
+                   # Recorded so playback/analysis tools can detect
                    # and default to the actual training condition instead of silently
                    # falling back to config.HEBBIAN_N_AGENTS/HEBBIAN_MAX_BATTERY, which
                    # would misrepresent this genome's behavior if it differs (n_agents
@@ -203,7 +199,8 @@ if __name__ == "__main__":
     parser.add_argument("--popsize", type=int, default=config.HEBBIAN_CMAES_POPSIZE,
                          help=f"CMA-ES population size (paper: {config.HEBBIAN_CMAES_POPSIZE}).")
     parser.add_argument("--maxiter", type=int, default=config.HEBBIAN_CMAES_GEN_MAX,
-                         help=f"Generations per stage (paper: {config.HEBBIAN_CMAES_GEN_MAX}).")
+                         help=f"Generations per stage (default {config.HEBBIAN_CMAES_GEN_MAX}; the paper's "
+                              "2-stage run uses 100 + 200, see train.py).")
     parser.add_argument("--n-agents", type=int, default=config.HEBBIAN_N_AGENTS,
                          help=f"Swarm size (paper: {config.HEBBIAN_N_AGENTS}).")
     parser.add_argument("--n-repeats", type=int, default=config.HEBBIAN_N_REPEATS,
@@ -233,7 +230,7 @@ if __name__ == "__main__":
                          help=f"Starting battery for all agents (paper: {config.HEBBIAN_MAX_BATTERY}). "
                               "Lower this to cut simulation cost -- fewer steps until termination.")
     parser.add_argument("--wind-grid", type=int, default=None,
-                         help=f"Wind grid resolution, both axes (paper/default: {config.HEBBIAN_NX}). "
+                         help=f"Wind grid resolution, both axes (default: {config.HEBBIAN_NX}; the paper uses 50). "
                               "This is the single biggest cost lever: the wake-marching loop is O(Nx) "
                               "per simulation step, so e.g. --wind-grid 50 cuts wind-enabled stages by "
                               "roughly 10x at the cost of a coarser wake model.")
@@ -248,7 +245,7 @@ if __name__ == "__main__":
                               "normal behavior. Use this to re-run a later stage with a different "
                               "--popsize/--maxiter against an existing, already-trained earlier stage "
                               "-- e.g. --stages save_battery_avoid_all --init-genome "
-                              "some_dir/hebbian_walk_left_best.npy --maxiter 200 -- without needing to "
+                              "some_dir/hebbian_walk_upwind_best.npy --maxiter 200 -- without needing to "
                               "re-run (or touch the output directory of) that earlier stage at all.")
     args = parser.parse_args()
 

@@ -140,7 +140,7 @@ def main():
     json.dump(out, open(OUT_JSON, "w"), indent=2)
     print(f"Saved {OUT_JSON}")
 
-    # --- Fig. 5a analogue: distance vs. remaining battery ---
+    # --- paper figure (a): distance vs. remaining battery ---
     fig, ax = plt.subplots(figsize=(6.2, 4.8))
     for l, (_, _, color, num) in CONTROLLERS.items():
         x = per[l]
@@ -154,7 +154,7 @@ def main():
     ax.legend(fontsize=8, loc="upper left")
     _save(fig, "paper_dist_vs_battery_n20")
 
-    # --- battery-awareness box plot ---
+    # --- paper figure (b): battery-awareness box plot ---
     fig, ax = plt.subplots(figsize=(4.2, 4.2))
     ax.boxplot([half, full], widths=0.5, showfliers=False)
     rng = np.random.default_rng(0)
@@ -165,7 +165,7 @@ def main():
     ax.grid(True, axis="y", ls=":", alpha=0.6)
     _save(fig, "paper_battery_awareness_boxplot")
 
-    # --- Fig. 6 analogue: trajectories, 1 and 5 agents, stage 1 vs stage 2 ---
+    # --- paper figure: trajectories, 1 and 5 agents, stage 1 vs stage 2 ---
     fig, axes = plt.subplots(2, 2, figsize=(10, 6.2))
     for col, l in enumerate(("Stage 1", "Stage 2")):
         path, cfg, *_ = CONTROLLERS[l]

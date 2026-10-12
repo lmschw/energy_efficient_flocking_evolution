@@ -1,13 +1,9 @@
 """Wind-wake ray-tracing, drag force, and battery drainage -- the physics shared by
-simulation_hebbian.py's own episode loop and lj_baseline.py's Table-3 comparison run.
+simulation_hebbian.py's episode loop and lj_baseline.py's baseline.
 
-Standalone copy: ports the same functions as initial_implementation/experiment/
-simulation_free_global_mod_2_LJ.py's RayTraceCircularRobots/agent_wind_percentage/
-dragforce/batterydrainage/_spawn_agents/_open_video_writer (1:1 ports of the MATLAB
-reference, RayTraceCircularRobots.m etc.), duplicated here rather than imported across
-the project boundary so this replication has no dependency on initial_implementation.
-If you change the physics in one copy, decide explicitly whether the same change
-belongs in the other -- nothing keeps them in sync automatically.
+RayTraceCircularRobots/agent_wind_percentage/dragforce/batterydrainage/_spawn_agents/
+_open_video_writer are 1:1 ports of the MATLAB reference (RayTraceCircularRobots.m and
+simulation_free_global_mod_2.m / simulation_free_global_mod_2_LJ.m).
 """
 from functools import lru_cache
 

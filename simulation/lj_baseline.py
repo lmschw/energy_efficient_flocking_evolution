@@ -1,12 +1,9 @@
-"""Runs the paper's Table 3 "standard collective motion baseline" -- the cluster-4
-comparison point in Fig. 5a -- for analyze_hebbian_results.py.
+"""The paper's baseline controller: the flocking model of Ferrante et al. (2012) with a
+Lennard-Jones-type potential (config.PAPER_BASELINE_RULES == data/lj_baseline_rules.json), run in
+the same simulator with the same wind, drag and battery model as the evolved controller.
 
-A trimmed, standalone copy of initial_implementation/experiment/
-simulation_free_global_mod_2_LJ.py's LJ control law (_flocking_velocity_command/move)
-and fitness, duplicated here rather than imported across the project boundary. Only
-what analyze_hebbian_results.py's baseline comparison actually needs: the numpy
-(kinematic) backend, no video rendering, no PyBullet, no CMA-ES training. See that file
-for the full original (video output, PyBullet rigid-body backend, LJ genome training).
+Python port of the MATLAB reference simulation_free_global_mod_2_LJ.m's control law
+(_flocking_velocity_command/move) and fitness; numpy (kinematic) backend only.
 """
 import numpy as np
 
@@ -145,7 +142,7 @@ def simulate_lj_baseline(rules=None, seed=None, n_agents=None, record_trajectory
                           record_battery=False, battery_aware=True):
     """Runs the LJ model (numpy/kinematic backend only) until any agent's battery
     depletes. rules: a 7-gain dict (r0/epsilon/k_align/k_goal/K1/K2/U); pass
-    config.PAPER_BASELINE_RULES for the Table 3 baseline. Returns (eff, dist_travelled,
+    config.PAPER_BASELINE_RULES for the paper's baseline. Returns (eff, dist_travelled,
     average_batt, collision_counter[, telemetry])."""
     if seed is not None:
         np.random.seed(seed)

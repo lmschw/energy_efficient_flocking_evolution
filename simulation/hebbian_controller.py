@@ -1,4 +1,4 @@
-"""Hebbian-plasticity MLP controller (paper Section 2.1, Eq. 1).
+"""Hebbian-plasticity MLP controller (the paper's Hebbian update equation).
 
 1:1 port of hebbianStep.m's forward pass + Hebbian weight update, and the per-agent
 weight-initialization loop in simulation_free_global_mod_2.m.
