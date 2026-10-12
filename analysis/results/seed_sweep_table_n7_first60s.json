@@ -1,0 +1,602 @@
+[
+ {
+  "condition": "plain_seed123",
+  "seed": 1000,
+  "front_changes_per_min": 11.0,
+  "persist_share_pct": 36.666666666666664,
+  "front_occupancy_entropy": 0.7515635450583179,
+  "reciprocity_r": -0.2844940175077166,
+  "hierarchy_entropy": 0.9608154732345908,
+  "hierarchy_steepness": 0.7485440617545226
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1001,
+  "front_changes_per_min": 7.0,
+  "persist_share_pct": 36.8421052631579,
+  "front_occupancy_entropy": 0.7524581663196386,
+  "reciprocity_r": -0.419726915466587,
+  "hierarchy_entropy": 0.9535957793769271,
+  "hierarchy_steepness": 0.7796411209354326
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1002,
+  "front_changes_per_min": 7.0,
+  "persist_share_pct": 31.818181818181817,
+  "front_occupancy_entropy": 0.6540999879587591,
+  "reciprocity_r": -0.3981920348303843,
+  "hierarchy_entropy": 0.8837854039402042,
+  "hierarchy_steepness": 0.985277612833061
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1003,
+  "front_changes_per_min": 6.0,
+  "persist_share_pct": 33.333333333333336,
+  "front_occupancy_entropy": 0.682562432861574,
+  "reciprocity_r": -0.3191439938613648,
+  "hierarchy_entropy": 0.9727338542735481,
+  "hierarchy_steepness": 0.49138578413687256
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1004,
+  "front_changes_per_min": 12.0,
+  "persist_share_pct": 66.66666666666667,
+  "front_occupancy_entropy": 0.8227600495071016,
+  "reciprocity_r": -0.4911445004557182,
+  "hierarchy_entropy": 0.9524875731533798,
+  "hierarchy_steepness": 0.7880208902738862
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1005,
+  "front_changes_per_min": 7.0,
+  "persist_share_pct": 50.0,
+  "front_occupancy_entropy": 0.7914318009970921,
+  "reciprocity_r": -0.19200728928871333,
+  "hierarchy_entropy": 0.9263338593564585,
+  "hierarchy_steepness": 0.8379314281694367
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1006,
+  "front_changes_per_min": 6.0,
+  "persist_share_pct": 16.216216216216218,
+  "front_occupancy_entropy": 0.8095589239382455,
+  "reciprocity_r": -0.32175556846341,
+  "hierarchy_entropy": 0.9452150289996204,
+  "hierarchy_steepness": 0.6468818799499867
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1007,
+  "front_changes_per_min": 6.0,
+  "persist_share_pct": 19.35483870967742,
+  "front_occupancy_entropy": 0.8014252783529208,
+  "reciprocity_r": -0.37175422042884304,
+  "hierarchy_entropy": 0.9527806923908347,
+  "hierarchy_steepness": 0.6997342296978489
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1008,
+  "front_changes_per_min": 12.0,
+  "persist_share_pct": 41.37931034482759,
+  "front_occupancy_entropy": 0.9134139311478734,
+  "reciprocity_r": 0.38950219558817806,
+  "hierarchy_entropy": 0.9840814640110337,
+  "hierarchy_steepness": 0.5088249462446959
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1009,
+  "front_changes_per_min": 10.0,
+  "persist_share_pct": 34.48275862068966,
+  "front_occupancy_entropy": 0.9290868747873149,
+  "reciprocity_r": 0.6099958078905384,
+  "hierarchy_entropy": 0.9183711278399742,
+  "hierarchy_steepness": 0.7257212078666077
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1010,
+  "front_changes_per_min": 12.0,
+  "persist_share_pct": 66.66666666666667,
+  "front_occupancy_entropy": 0.8375857272933834,
+  "reciprocity_r": -0.5460728052654158,
+  "hierarchy_entropy": 0.9702240019221039,
+  "hierarchy_steepness": 0.6687024475934741
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1011,
+  "front_changes_per_min": 13.0,
+  "persist_share_pct": 48.148148148148145,
+  "front_occupancy_entropy": 0.8679367751858817,
+  "reciprocity_r": -0.34212783274592456,
+  "hierarchy_entropy": 0.940785959010759,
+  "hierarchy_steepness": 0.6054818488860202
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1012,
+  "front_changes_per_min": 11.0,
+  "persist_share_pct": 61.111111111111114,
+  "front_occupancy_entropy": 0.9132778106321022,
+  "reciprocity_r": -0.6738736802108737,
+  "hierarchy_entropy": 0.9387896620330405,
+  "hierarchy_steepness": 0.7808323013411106
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1013,
+  "front_changes_per_min": 10.0,
+  "persist_share_pct": 34.48275862068966,
+  "front_occupancy_entropy": 0.8312068894177895,
+  "reciprocity_r": -0.46048949738394435,
+  "hierarchy_entropy": 0.9208321353789857,
+  "hierarchy_steepness": 0.7100707127681769
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1014,
+  "front_changes_per_min": 11.0,
+  "persist_share_pct": 42.30769230769231,
+  "front_occupancy_entropy": 0.9405477087384326,
+  "reciprocity_r": -0.6000206304787972,
+  "hierarchy_entropy": 0.8817474146348296,
+  "hierarchy_steepness": 0.8817368657586204
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1015,
+  "front_changes_per_min": 14.0,
+  "persist_share_pct": 50.0,
+  "front_occupancy_entropy": 0.970793733905453,
+  "reciprocity_r": -0.612842276655174,
+  "hierarchy_entropy": 0.9638327309396864,
+  "hierarchy_steepness": 0.6370795522054391
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1016,
+  "front_changes_per_min": 10.0,
+  "persist_share_pct": 40.0,
+  "front_occupancy_entropy": 0.8176035507936832,
+  "reciprocity_r": -0.6785011749895856,
+  "hierarchy_entropy": 0.9617551439329204,
+  "hierarchy_steepness": 0.710353236154314
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1017,
+  "front_changes_per_min": 8.0,
+  "persist_share_pct": 29.62962962962963,
+  "front_occupancy_entropy": 0.8799843277927055,
+  "reciprocity_r": -0.5240303826522644,
+  "hierarchy_entropy": 0.9462742534284141,
+  "hierarchy_steepness": 0.797422507529207
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1018,
+  "front_changes_per_min": 14.0,
+  "persist_share_pct": 50.0,
+  "front_occupancy_entropy": 0.8378484472353834,
+  "reciprocity_r": -0.44771768295077297,
+  "hierarchy_entropy": 0.8993957371861926,
+  "hierarchy_steepness": 0.7818834044545602
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1019,
+  "front_changes_per_min": 7.0,
+  "persist_share_pct": 100.0,
+  "front_occupancy_entropy": 0.4585409529946832,
+  "reciprocity_r": -0.27642714287790315,
+  "hierarchy_entropy": 0.9302320148262273,
+  "hierarchy_steepness": 0.817742400102177
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1020,
+  "front_changes_per_min": 10.0,
+  "persist_share_pct": 28.571428571428573,
+  "front_occupancy_entropy": 0.8657945510181229,
+  "reciprocity_r": -0.3870395765298005,
+  "hierarchy_entropy": 0.8524467871886564,
+  "hierarchy_steepness": 0.9339583452324206
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1021,
+  "front_changes_per_min": 6.0,
+  "persist_share_pct": 75.0,
+  "front_occupancy_entropy": 0.4310329870690274,
+  "reciprocity_r": -0.3861061395787834,
+  "hierarchy_entropy": 0.9869504926387184,
+  "hierarchy_steepness": 0.499103375557983
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1022,
+  "front_changes_per_min": 10.0,
+  "persist_share_pct": 33.333333333333336,
+  "front_occupancy_entropy": 0.9031478429699538,
+  "reciprocity_r": 0.2463027938560044,
+  "hierarchy_entropy": 0.958885777905905,
+  "hierarchy_steepness": 0.6768412192123634
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1023,
+  "front_changes_per_min": 12.0,
+  "persist_share_pct": 40.0,
+  "front_occupancy_entropy": 0.8146475900068197,
+  "reciprocity_r": -0.3502554273880765,
+  "hierarchy_entropy": 0.9577301738944074,
+  "hierarchy_steepness": 0.7757504730055931
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1024,
+  "front_changes_per_min": 10.0,
+  "persist_share_pct": 43.47826086956522,
+  "front_occupancy_entropy": 0.839673953285192,
+  "reciprocity_r": -0.3805514839669273,
+  "hierarchy_entropy": 0.9625474195019067,
+  "hierarchy_steepness": 0.7044330973826528
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1025,
+  "front_changes_per_min": 9.0,
+  "persist_share_pct": 28.125,
+  "front_occupancy_entropy": 0.851509881593792,
+  "reciprocity_r": -0.2854406492769984,
+  "hierarchy_entropy": 0.9091173120632968,
+  "hierarchy_steepness": 0.8428666959965653
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1026,
+  "front_changes_per_min": 5.0,
+  "persist_share_pct": 38.46153846153846,
+  "front_occupancy_entropy": 0.5432931494853349,
+  "reciprocity_r": -0.2812727083616902,
+  "hierarchy_entropy": 0.9790841339323378,
+  "hierarchy_steepness": 0.5816726281959455
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1027,
+  "front_changes_per_min": 2.0,
+  "persist_share_pct": 50.0,
+  "front_occupancy_entropy": 0.3615234345635171,
+  "reciprocity_r": -0.4082144449109556,
+  "hierarchy_entropy": 0.903225972804555,
+  "hierarchy_steepness": 0.9051886834264119
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1028,
+  "front_changes_per_min": 8.0,
+  "persist_share_pct": 57.142857142857146,
+  "front_occupancy_entropy": 0.8048570837503379,
+  "reciprocity_r": -0.7453857354622568,
+  "hierarchy_entropy": 0.9693848611503635,
+  "hierarchy_steepness": 0.6782670491882096
+ },
+ {
+  "condition": "plain_seed123",
+  "seed": 1029,
+  "front_changes_per_min": 8.0,
+  "persist_share_pct": 50.0,
+  "front_occupancy_entropy": 0.6848565561399019,
+  "reciprocity_r": -0.5846875045973243,
+  "hierarchy_entropy": 0.8553202897190535,
+  "hierarchy_steepness": 0.7909574450767195
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1000,
+  "front_changes_per_min": 1.0,
+  "persist_share_pct": 100.0,
+  "front_occupancy_entropy": 0.024766959976634244,
+  "reciprocity_r": -0.21457642405904478,
+  "hierarchy_entropy": 0.9080440076347999,
+  "hierarchy_steepness": 0.8324614146399402
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1001,
+  "front_changes_per_min": 11.0,
+  "persist_share_pct": 50.0,
+  "front_occupancy_entropy": 0.3561358090334939,
+  "reciprocity_r": -0.3986838186952596,
+  "hierarchy_entropy": 0.8931963234051313,
+  "hierarchy_steepness": 0.9434063223512567
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1002,
+  "front_changes_per_min": 12.0,
+  "persist_share_pct": 38.70967741935484,
+  "front_occupancy_entropy": 0.332721754572764,
+  "reciprocity_r": -0.27919696769195235,
+  "hierarchy_entropy": 0.7625911711034409,
+  "hierarchy_steepness": 0.8406284491826771
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1003,
+  "front_changes_per_min": 5.0,
+  "persist_share_pct": 38.46153846153846,
+  "front_occupancy_entropy": 0.1913733618458698,
+  "reciprocity_r": -0.24690518804948314,
+  "hierarchy_entropy": 0.9015216960202584,
+  "hierarchy_steepness": 0.917331924724709
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1004,
+  "front_changes_per_min": 3.0,
+  "persist_share_pct": 100.0,
+  "front_occupancy_entropy": 0.2739920139663875,
+  "reciprocity_r": -0.2601553473898421,
+  "hierarchy_entropy": 0.973400411659181,
+  "hierarchy_steepness": 0.6583614195534615
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1005,
+  "front_changes_per_min": 3.0,
+  "persist_share_pct": 42.857142857142854,
+  "front_occupancy_entropy": 0.3532720926693798,
+  "reciprocity_r": -0.22920033566769007,
+  "hierarchy_entropy": 0.9761297783362773,
+  "hierarchy_steepness": 0.5728786376651093
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1006,
+  "front_changes_per_min": 7.0,
+  "persist_share_pct": 33.333333333333336,
+  "front_occupancy_entropy": 0.33771228430889927,
+  "reciprocity_r": -0.3339370729760378,
+  "hierarchy_entropy": 0.9593428171194044,
+  "hierarchy_steepness": 0.6973636652677943
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1007,
+  "front_changes_per_min": 4.0,
+  "persist_share_pct": 36.36363636363637,
+  "front_occupancy_entropy": 0.332721754572764,
+  "reciprocity_r": -0.3651478814255991,
+  "hierarchy_entropy": 0.9554981766320211,
+  "hierarchy_steepness": 0.7298837612214176
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1008,
+  "front_changes_per_min": 1.0,
+  "persist_share_pct": 20.0,
+  "front_occupancy_entropy": 0.2739920139663875,
+  "reciprocity_r": -0.22283890009577273,
+  "hierarchy_entropy": 0.9138246051707503,
+  "hierarchy_steepness": 0.9198909251642066
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1009,
+  "front_changes_per_min": 0.0,
+  "persist_share_pct": NaN,
+  "front_occupancy_entropy": -0.0,
+  "reciprocity_r": -0.1682971519713658,
+  "hierarchy_entropy": 0.912470703336231,
+  "hierarchy_steepness": 0.7789107568385717
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1010,
+  "front_changes_per_min": 9.0,
+  "persist_share_pct": 32.142857142857146,
+  "front_occupancy_entropy": 0.5113995215056898,
+  "reciprocity_r": -0.3861073075478831,
+  "hierarchy_entropy": 0.937261842118801,
+  "hierarchy_steepness": 0.8415745884978318
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1011,
+  "front_changes_per_min": 3.0,
+  "persist_share_pct": 42.857142857142854,
+  "front_occupancy_entropy": 0.2511064778655247,
+  "reciprocity_r": -0.22338514614094374,
+  "hierarchy_entropy": 0.9664083842819018,
+  "hierarchy_steepness": 0.7269982737458514
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1012,
+  "front_changes_per_min": 0.0,
+  "persist_share_pct": 0.0,
+  "front_occupancy_entropy": 0.13689453410644006,
+  "reciprocity_r": -0.18383253203651578,
+  "hierarchy_entropy": 0.9620040571404125,
+  "hierarchy_steepness": 0.6099766707708026
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1013,
+  "front_changes_per_min": 3.0,
+  "persist_share_pct": 20.0,
+  "front_occupancy_entropy": 0.42362252952654056,
+  "reciprocity_r": -0.44945335528337804,
+  "hierarchy_entropy": 0.9004119674321289,
+  "hierarchy_steepness": 0.8555822268821035
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1014,
+  "front_changes_per_min": 1.0,
+  "persist_share_pct": 10.0,
+  "front_occupancy_entropy": 0.12586913476634173,
+  "reciprocity_r": -0.19885679077722268,
+  "hierarchy_entropy": 0.9729146962321679,
+  "hierarchy_steepness": 0.49397411320782963
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1015,
+  "front_changes_per_min": 8.0,
+  "persist_share_pct": 25.0,
+  "front_occupancy_entropy": 0.4492233383115313,
+  "reciprocity_r": -0.44229865047423744,
+  "hierarchy_entropy": 0.7370825817593489,
+  "hierarchy_steepness": 0.9109981379147245
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1016,
+  "front_changes_per_min": 9.0,
+  "persist_share_pct": 42.857142857142854,
+  "front_occupancy_entropy": 0.3299920009645311,
+  "reciprocity_r": -0.3591855609064556,
+  "hierarchy_entropy": 0.8888308845296132,
+  "hierarchy_steepness": 0.9701129852448324
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1017,
+  "front_changes_per_min": 1.0,
+  "persist_share_pct": 14.285714285714286,
+  "front_occupancy_entropy": 0.10935747092632744,
+  "reciprocity_r": -0.16470217152041042,
+  "hierarchy_entropy": 0.8006703277139009,
+  "hierarchy_steepness": 0.8192371813547831
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1018,
+  "front_changes_per_min": 8.0,
+  "persist_share_pct": 44.44444444444444,
+  "front_occupancy_entropy": 0.33529462941500876,
+  "reciprocity_r": -0.2781541129400225,
+  "hierarchy_entropy": 0.9501927205224053,
+  "hierarchy_steepness": 0.7489573341541474
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1019,
+  "front_changes_per_min": 1.0,
+  "persist_share_pct": 33.333333333333336,
+  "front_occupancy_entropy": 0.060078235983447734,
+  "reciprocity_r": -0.17499713273648457,
+  "hierarchy_entropy": 0.8806463265871703,
+  "hierarchy_steepness": 0.9585192394340651
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1020,
+  "front_changes_per_min": 3.0,
+  "persist_share_pct": 27.272727272727273,
+  "front_occupancy_entropy": 0.28949746716353214,
+  "reciprocity_r": -0.21473093416989442,
+  "hierarchy_entropy": 0.8421196665812529,
+  "hierarchy_steepness": 0.7466752873255816
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1021,
+  "front_changes_per_min": 11.0,
+  "persist_share_pct": 61.111111111111114,
+  "front_occupancy_entropy": 0.37501517959428815,
+  "reciprocity_r": -0.3564302666651362,
+  "hierarchy_entropy": 0.9232713934065748,
+  "hierarchy_steepness": 0.7619189530553381
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1022,
+  "front_changes_per_min": 2.0,
+  "persist_share_pct": 50.0,
+  "front_occupancy_entropy": 0.10201665449057161,
+  "reciprocity_r": -0.20280688047763765,
+  "hierarchy_entropy": 0.9250429259331252,
+  "hierarchy_steepness": 0.8968788650677006
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1023,
+  "front_changes_per_min": 10.0,
+  "persist_share_pct": 34.48275862068966,
+  "front_occupancy_entropy": 0.33349097129297495,
+  "reciprocity_r": -0.2588925798210389,
+  "hierarchy_entropy": 0.9543676015142679,
+  "hierarchy_steepness": 0.6867820300578629
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1024,
+  "front_changes_per_min": 2.0,
+  "persist_share_pct": 25.0,
+  "front_occupancy_entropy": 0.17179723954368153,
+  "reciprocity_r": -0.1913858565298264,
+  "hierarchy_entropy": 0.9208360034100155,
+  "hierarchy_steepness": 0.8093323216670616
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1025,
+  "front_changes_per_min": 0.0,
+  "persist_share_pct": 0.0,
+  "front_occupancy_entropy": 0.04356114579902961,
+  "reciprocity_r": -0.16994780571395318,
+  "hierarchy_entropy": 0.8793497210714116,
+  "hierarchy_steepness": 0.8790720164334445
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1026,
+  "front_changes_per_min": 11.0,
+  "persist_share_pct": 100.0,
+  "front_occupancy_entropy": 0.3271035759815648,
+  "reciprocity_r": -0.2838047241092764,
+  "hierarchy_entropy": 0.9708190461678549,
+  "hierarchy_steepness": 0.642834031505139
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1027,
+  "front_changes_per_min": 1.0,
+  "persist_share_pct": 100.0,
+  "front_occupancy_entropy": 0.060078235983447734,
+  "reciprocity_r": -0.23658498083601737,
+  "hierarchy_entropy": 0.9227435709843936,
+  "hierarchy_steepness": 0.9420179255572594
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1028,
+  "front_changes_per_min": 8.0,
+  "persist_share_pct": 47.05882352941177,
+  "front_occupancy_entropy": 0.33349097129297495,
+  "reciprocity_r": -0.3957023146815291,
+  "hierarchy_entropy": 0.9271417171118933,
+  "hierarchy_steepness": 0.8563036973277908
+ },
+ {
+  "condition": "lj_baseline",
+  "seed": 1029,
+  "front_changes_per_min": 8.0,
+  "persist_share_pct": 66.66666666666667,
+  "front_occupancy_entropy": 0.2209910051970559,
+  "reciprocity_r": -0.28005757522763597,
+  "hierarchy_entropy": 0.9604430254367523,
+  "hierarchy_steepness": 0.6945385347553611
+ }
+]
